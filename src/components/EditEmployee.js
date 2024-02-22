@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 function EditEmployee(props) {
   const [show, setShow] = useState(false);
 
-  const [name, setName] = useState(props.name);
+  const [name, setName] = useState(props.name); // set the initial value of the name to the name prop
   const [role, setRole] = useState(props.role);
   const [img,setImage] = useState(props.img);
 
@@ -30,7 +30,7 @@ function EditEmployee(props) {
         <Modal.Body>
             <form id="editmodal"
             onSubmit={(e)=>{
-                e.preventDefault();
+                e.preventDefault(); // prevents the page from refreshing
                 props.updateEmployee(props.id,name,role,img);
                 handleClose();
                 }

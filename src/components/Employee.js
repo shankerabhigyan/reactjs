@@ -13,7 +13,7 @@ function Employee(props) {
                     {props.role}
                 </p>
                 </div>
-                <EditEmployee name={props.name} role={props.role} updateEmployee={props.updateEmployee} id={props.id} />
+                {props.editEmployee}
             </div>
             </div>
     );
